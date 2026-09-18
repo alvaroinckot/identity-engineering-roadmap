@@ -1,0 +1,32 @@
+name: New resource
+description: Add a link under an existing topic
+title: "[resource] <topic>: <title>"
+labels: [resource]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic file
+      description: e.g. roadmap/09-delegation-and-impersonation/token-exchange-rfc-8693.md
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+    validations:
+      required: true
+  - type: dropdown
+    id: tag
+    attributes:
+      label: Type
+      options: [official, article, video, paper, opensource]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this one
+      description: What does it add that the existing resources do not?
+    validations:
+      required: true

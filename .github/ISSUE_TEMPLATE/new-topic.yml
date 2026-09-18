@@ -1,0 +1,33 @@
+name: New topic
+description: Something is missing from the map
+title: "[topic] <title>"
+labels: [topic]
+body:
+  - type: input
+    id: area
+    attributes:
+      label: Area
+      description: e.g. 08 · Workload & agent identity, or "new area" with a proposed name
+    validations:
+      required: true
+  - type: input
+    id: after
+    attributes:
+      label: Where it sits
+      description: Which topic does it come after, and why that order?
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Topic text
+      description: One to four sentences. What it is, why it exists, what AI agents change.
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources
+      description: At least one official source, as "- [@official@Title](url)"
+    validations:
+      required: true

@@ -1,0 +1,25 @@
+name: Correction
+description: Something on a topic page is wrong
+title: "[fix] <topic>: <what>"
+labels: [correction]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File
+      description: e.g. roadmap/06-tokens-and-cryptography/how-jwt-was-born.md
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What the source says
+      description: Quote the normative text and link the section.
+    validations:
+      required: true
