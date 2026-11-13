@@ -24,7 +24,10 @@ ID-JAG, or gets a fresh one, instead (Section 4.4.4). Revision -05 added mTLS al
 for sender-constraining the ID-JAG, and specified how the resource server finds the signing
 keys. Appendix A.4 walks through an AI agent calling an external tool. The MCP profile of
 this flow is [MCP Enterprise-Managed
-Authorization](mcp-enterprise-managed-authorization.md). Okta shipped it as Agent SSO,
+Authorization](mcp-enterprise-managed-authorization.md). A proposed extension carries XAA
+past the first hop, for a service that received an access token and must call another
+app for the same user (→ [Identity Continuation
+Assertion](identity-continuation-assertion.md)). Okta shipped XAA as Agent SSO,
 generally available on 24 August 2026 and included in core Okta SSO. Okta maintains xaa.dev,
 a sandbox that now also runs the SAML flow. The same grant shape, for agents acting on their
 own behalf with no user, is the [Workload Authorization
