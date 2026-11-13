@@ -17,11 +17,14 @@ the access token comes from an authorization server the MCP server points the cl
 RFC 9728 protected resource metadata, → [Server
 metadata](../05-identity-protocols/server-metadata.md)). The retrofit model: MCP defines no
 new token format; it profiles selected existing OAuth/OIDC mechanisms and maps MCP roles
-onto OAuth roles.
+onto OAuth roles. Where the enterprise identity provider should decide which MCP servers a
+user may reach, the [Enterprise-Managed Authorization](mcp-enterprise-managed-authorization.md)
+extension replaces the per-server consent redirect with Cross App Access.
 
 ## Resources
 
 - [@official@Model Context Protocol — Authorization specification](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)
+- [@official@Model Context Protocol — Enterprise-Managed Authorization extension](https://modelcontextprotocol.io/extensions/auth/enterprise-managed-authorization)
 - [@official@RFC 9728 — OAuth 2.0 Protected Resource Metadata](https://datatracker.ietf.org/doc/html/rfc9728)
 
 ---

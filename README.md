@@ -9,7 +9,7 @@ Follow the spine top to bottom for the full trail, or jump to any area. Side bra
 
 ## The map
 
-![The Identity Engineering Roadmap: 14 areas, 85 topics and 48 sub-topics laid out as a learning path, with side detours for directories and secrets](assets/roadmap.png)
+![The Identity Engineering Roadmap: 14 areas, 86 topics and 53 sub-topics laid out as a learning path, with side detours for directories and secrets](assets/roadmap.png)
 
 <details>
 <summary>Text version of the map (Mermaid source)</summary>
@@ -48,9 +48,11 @@ flowchart TD
     f1["X.500 & LDAP"] --> f2["Active Directory"] --> f3["The sync problem"] --> f4["SCIM"] --> f5["Multi-tenant SaaS: organizations & enterprise SSO"] --> f5b["Identity governance: lifecycle & access reviews"] --> f6["Provisioning non-humans"]
   end
   subgraph A07["07 · Workload & agent identity"]
-    g1["Machine identity & SPIFFE"] --> g2["Workload identity federation"] --> g3["Non-human identities"] --> g3b["API keys & static credentials"] --> g4["Attestation: RATS"] --> g5["Agent identity"] --> g6["Agent protocols"] --> g7["Bots on the web: Web Bot Auth & Privacy Pass"] --> g8["Least privilege & audit for agents"] --> g9["Cross-app access: XAA"] --> g10["WIMSE"]
+    g1["Machine identity & SPIFFE"] --> g2["Workload identity federation"] --> g3["Non-human identities"] --> g3b["API keys & static credentials"] --> g4["Attestation: RATS"] --> g5["Agent identity"] --> g6["Agent protocols"] --> g7["Bots on the web: Web Bot Auth & Privacy Pass"] --> g8["Least privilege & audit for agents"] --> g9["Cross-app access: XAA"] --> g9w["Workload Authorization Grant: WAG"] --> g10["WIMSE"]
     g2 -.-> g2a["Kubernetes service accounts & projected tokens"] --> g2b["Keyless signing: Sigstore"]
     g6 -.-> g6a["MCP authorization"] --> g6b["AAuth"] --> g6c["A2A"]
+    g9 -.-> g9a["MCP Enterprise-Managed Authorization"]
+    g10 -.-> g10a["WIMSE architecture & workload identifiers"] --> g10b["Workload credentials: WIT & WIC"] --> g10c["Workload-to-workload authentication: WPT, HTTP Signatures & mTLS"] --> g10d["AIMS: agents as WIMSE workloads"]
   end
   subgraph A08["08 · Delegation & impersonation"]
     h1["Impersonation vs. delegation"] --> h2["The confused deputy"] --> h3["Assume-role"] --> h4["On-behalf-of"] --> h5["Token exchange: RFC 8693"] --> h6["Call chains: transaction tokens & identity chaining"] --> h7["Capabilities & attenuation: macaroons, Biscuit, UCAN"]
@@ -106,7 +108,7 @@ flowchart TD
 | 04 | [Tokens & cryptography](roadmap/04-tokens-and-cryptography/README.md) | JWT/JOSE, validation, hashing, PKI, post-quantum |
 | 05 | [Identity protocols](roadmap/05-identity-protocols/README.md) | OAuth 2.x (grants, scopes & consent, PKCE, registration & metadata, JAR & PAR, token formats, DPoP & mTLS, security BCP, native/browser apps, FAPI), OpenID Connect (ID token, flows, CIBA, UserInfo, discovery & federation, logout), SAML 2.0, verifiable credentials (SD-JWT, OpenID4VC) |
 | 06 | [Directories & provisioning](roadmap/06-directories-and-provisioning/README.md) | LDAP, Active Directory, SCIM, multi-tenant SaaS, identity governance & access reviews, provisioning non-humans |
-| 07 | [Workload & agent identity](roadmap/07-workload-and-agent-identity/README.md) | SPIFFE, federation (Kubernetes, Sigstore), NHI, API keys, attestation, agent identity & protocols, web bots, XAA, WIMSE |
+| 07 | [Workload & agent identity](roadmap/07-workload-and-agent-identity/README.md) | SPIFFE, federation (Kubernetes, Sigstore), NHI, API keys, attestation, agent identity & protocols, web bots, XAA & MCP enterprise-managed auth, WAG, WIMSE (architecture, WIT/WIC, WPT, HTTP Signatures, mTLS, AIMS) |
 | 08 | [Delegation & impersonation](roadmap/08-delegation-and-impersonation/README.md) | confused deputy, assume-role, on-behalf-of, RFC 8693, call chains, capabilities |
 | 09 | [Privileged access](roadmap/09-privileged-access/README.md) | PAM, just-in-time, break-glass, human-in-the-loop, audit trails |
 | 10 | [Zero trust & continuous access](roadmap/10-zero-trust-and-continuous-access/README.md) | SP 800-207, device posture, BeyondCorp, Shared Signals, CAEP, revocation |
