@@ -19,7 +19,14 @@ The AI-era core: identity for software, and what changes when the software is an
 8. [Bots on the web: Web Bot Auth & Privacy Pass](bots-on-the-web.md)
 9. [Least privilege & audit for agents](least-privilege-audit-for-agents.md)
 10. [Cross-app access: XAA](cross-app-access-xaa.md)
-11. [WIMSE](wimse.md)
+   1. [MCP Enterprise-Managed Authorization](mcp-enterprise-managed-authorization.md)
+   2. [Multi-hop XAA: Identity Continuation Assertion](identity-continuation-assertion.md)
+11. [Workload Authorization Grant: WAG](workload-authorization-grant-wag.md)
+12. [WIMSE](wimse.md)
+   1. [WIMSE architecture & workload identifiers](wimse-architecture-identifiers.md)
+   2. [Workload credentials: WIT & WIC](wimse-workload-credentials.md)
+   3. [Workload-to-workload authentication: WPT, HTTP Signatures & mTLS](wimse-workload-to-workload-authentication.md)
+   4. [AIMS: agents as WIMSE workloads](wimse-aims.md)
 
 ## What AI agents change
 

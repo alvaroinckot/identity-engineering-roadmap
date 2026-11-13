@@ -8,11 +8,12 @@ Shared Signals the sharing of threat and device posture signals. IPSIE owns ente
 of OpenID Connect, SCIM and Shared Signals, with no Final text yet. At the IETF, WIMSE covers
 workload identity across chains of HTTP calls, SPICE covers digital credentials in the issuer,
 holder and verifier model, and SCIM maintains the provisioning RFCs. Every WIMSE document is
-still an Internet-Draft and the agent-related SCIM texts are individual submissions: proposals,
-not standards.
+still an Internet-Draft: as of November 2026 the HTTP Signatures profile is with the IESG and
+Workload Identity Practices is in IETF Last Call. The agent-related SCIM texts and the Workload
+Authorization Grant are individual submissions: proposals, not standards.
 
 OpenID Foundation WGs (AB/Connect, AuthZEN, Shared Signals, IPSIE) and its AI Identity
-Management Community Group (a CG, so it does not publish specs); IETF WIMSE, SPICE
+Management Community Group (a CG, so it does not publish specs); IETF WIMSE (→ [WIMSE](../07-workload-and-agent-identity/wimse.md)), SPICE
 (rechartering as of September 2026), and SCIM.
 
 ## Resources
